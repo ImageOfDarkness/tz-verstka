@@ -12,34 +12,44 @@
 </head>
 <body>
     <div class="container">
-        <div class="image-wrapper-continer">
-            <div class="image-wrapper">
-                <img class="image" src="./img/Frame%201.png" alt="img">
-                <img class="image--mobile" src="./img/Group%201.png" alt="img">
+        <div class="banner">
+            <div class="banner__inner-wrapper">
+                <img class="banner__image" src="./img/Frame%201.png" alt="img">
+                <img class="banner__image--mobile" src="./img/Group%201.png" alt="img">
                 <div class="image__item-name">Reduslim</div>
                 <div class="image__item-type">ECO</div>
             </div>
         </div>
-        <div class="wrapper">
+        <div class="card">
             <header>
                 <div class="header-title"><h1>Сделай шаг к выздоровлению</h1></div>
             </header>
             <main>
-                <form class="input-wrapper">
+                <form class="card-wrapper">
                     <div class="input-container">
                         <span class="input-title">Ваше <span class="input-title-green">имя</span></span>
                         <input type="text" class="input-name" placeholder="Алексей">
                     </div>
-                    <div class="input-wrapper-phone">
+                    <div class="card-wrapper__phone">
                         <div class="input-container">
                             <span class="input-title">Ваше <span class="input-title-green">телефон</span></span>
                             <input type="text" class="input-phone" placeholder="+7 (123) 456 78-90">
                         </div>
                         <div class="input-container">
-                            <select name="" id="" class="select-region">
-                                <option class="RU" value="RU">RU</option>
-                                <option class="EN" value="EN">EN</option>
-                            </select>
+<!--                            <select name="" id="" class="select-region">-->
+<!--                                <option class="RU" value="RU">RU</option>-->
+<!--                                <option class="EN" value="EN">EN</option>-->
+<!--                            </select>-->
+                            <div class="select">
+                                <div id="select__header" class="select__header">
+                                    <span class="select__curent">RU</span>
+                                    <div class="seect__icon"></div>
+                                </div>
+                                <div class="select__body">
+                                    <div class="select__item">RU</div>
+                                    <div class="select__item">EN</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <button class="button"><div class="buuton-item">Заказать</div></button>
@@ -48,11 +58,12 @@
         </div>
         <div class="secure-wrapper">
             <div class="secure">
-                <span class="footer-text">Trusted</span>
-                <img class="footer-img" src="./img/lock.svg" alt="lock">
-                <span class="footer-text">Secure</span>
+                <span class="secure-text">Trusted</span>
+                <img class="secure-img" src="./img/lock.svg" alt="lock">
+                <span class="secure-text">Secure</span>
             </div>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>

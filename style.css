@@ -1,3 +1,7 @@
+:root{
+    --main-bg-color: #F4F4F4;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -8,19 +12,24 @@ html{
     color: #212121;
 }
 
+body{
+    background-color: var(--main-bg-color);
+}
+
 .container{
     max-width: 1280px;
     margin: 0 auto;
     padding: 75px 80px 75px 80px;
-    background-color: #F4F4F4;
     display: flex;
 }
 
-.image-wrapper-continer{
+.banner{
     background-color: white;
+    max-width: 560px;
+    margin: 0 auto;
 }
 
-.image-wrapper{
+.banner__inner-wrapper{
     width: 100%;
     height: 100%;
     max-width: 560px;
@@ -30,11 +39,11 @@ html{
     background-color: white;
 }
 
-.image{
+.banner__image{
     width: 100%;
 }
 
-.image--mobile{
+.banner__image--mobile{
     display: none;
 }
 
@@ -58,7 +67,7 @@ html{
     left: 40px;
 }
 
-.wrapper{
+.card{
     max-width: 560px;
     margin: 0 auto;
     width: 100%;
@@ -90,7 +99,7 @@ main{
     background-color: white;
 }
 
-.input-wrapper{
+.card-wrapper{
     margin: 0 auto;
     max-width: 320px;
 }
@@ -121,7 +130,7 @@ main{
     margin-bottom: 20px;
 }
 
-.input-wrapper-phone{
+.card-wrapper__phone{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -140,31 +149,88 @@ main{
     border-radius: 5px;
 }
 
-.select-region{
-    position: relative;
+.select{
     width: 116px;
     height: 50px;
-    padding: 16px 20px 16px 20px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 130%;
+    position: relative;
+}
+
+.select.is-active .select__body {
+    display: block;
+}
+
+.select.is-active .seect__icon {
+    transform: rotate(-45deg);
+}
+
+.select__header{
+    display: flex;
     background: #F8F8F8;
     border: 1px solid #E4E4E4;
     border-radius: 5px;
+    cursor: pointer;
+    /*width: 116px;*/
+    /*height: 50px;*/
+}
+
+.select__curent{
+    padding: 16px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
     color: #212121;
 }
 
-
-.select-region:after{
+.seect__icon{
     position: absolute;
-    content: '';
-    background-image: url("./img/image7.svg");
-    background-repeat: no-repeat;
-    width: 26px;
-    height: 18px;
-    top: 0px;
-    left: 10px;
+    right: 20px;
+    top: 20px;
+    height: 8px;
+    width: 8px;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    transform: rotate(135deg);
 }
+
+.select__body{
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    border: 1px solid #E4E4E4;
+    border-radius: 0px 0px 5px 5px;
+    border-top: 0;
+    background-color: #F8F8F8;
+    z-index: 1;
+}
+
+.select__item{
+    cursor: pointer;
+    padding: 16px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    color: #212121;
+}
+
+.select__item:hover{
+    background-color: white;
+}
+
+/*.select-region{*/
+/*    position: relative;*/
+/*    width: 116px;*/
+/*    height: 50px;*/
+/*    padding: 16px 20px 16px 20px;*/
+/*    font-weight: 600;*/
+/*    font-size: 14px;*/
+/*    line-height: 130%;*/
+/*    background: #F8F8F8;*/
+/*    border: 1px solid #E4E4E4;*/
+/*    border-radius: 5px;*/
+/*    color: #212121;*/
+/*}*/
 
 .button{
     border: none;
@@ -179,6 +245,7 @@ main{
     color: #FFFFFF;
     padding: 12px 0px 12px 115px;
     margin-top: 38px;
+    cursor: pointer;
 }
 
 .buuton-item{
@@ -211,14 +278,14 @@ main{
     max-width: 160px;
 }
 
-.footer-text{
+.secure-text{
     font-size: 14px;
     line-height: 130%;
     color: #212121;
     font-weight: bold;
 }
 
-.footer-img{
+.secure-img{
     width: 12px;
     height: 15px;
 }
@@ -234,7 +301,7 @@ main{
         padding: 60px 0;
     }
 
-    .image-wrapper{
+    .banner__inner-wrapper{
 
     }
 
@@ -251,17 +318,17 @@ main{
         color: #212121;
     }
 
-    .image-wrapper{
+    .banner__inner-wrapper{
         max-width: 280px;
         align-items: center;
         padding-top: 32px;
     }
 
-    .image{
+    .banner__image{
         display: none;
     }
 
-    .image--mobile{
+    .banner__image--mobile{
         display: block;
         margin: 0 auto;
     }
@@ -277,7 +344,7 @@ main{
         padding-bottom: 28px;
     }
 
-    .input-wrapper{
+    .card-wrapper{
         max-width: 280px;
     }
 
@@ -289,17 +356,18 @@ main{
         width: 174px;
     }
 
-    .select-region{
-        width: 96px;
-    }
+    /*.select-region{*/
+    /*    width: 96px;*/
+    /*}*/
 
     .button{
         width: 280px;
         padding-left: 94px;
     }
 
-    .image-wrapper-continer{
+    .banner{
         padding-top: 40px;
+        margin: 0;
     }
 
     .secure-wrapper{
